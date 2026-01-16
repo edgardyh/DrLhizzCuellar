@@ -9,9 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
- <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/main.js"></script>
-  
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -30,24 +28,36 @@
 </header>
 
 <section class="hero">
-  <h2>Tu Pediatra de Confianza</h2>
-  <p>Acompañando el crecimiento de tus pequeños con evidencia científica y calidez humana.</p>
+  <div class="hero-content">
+    <h2>Tu Pediatra de Confianza</h2>
+    <p>Acompañando el crecimiento de tus pequeños con evidencia científica y calidez humana.</p>
+  </div>
 </section>
 
 <section class="info-grid">
-  <div class="info-card">🩺<h3>Consulta Especializada</h3><p>Atención integral infantil.</p></div>
-  <div class="info-card">🥦<h3>Alimentación</h3><p>Nutrición segura y consciente.</p></div>
-  <div class="info-card">🏠<h3>Domicilios</h3><p>Atención pediátrica en casa.</p></div>
+  <div class="info-card">
+    <span class="icon">🩺</span>
+    <h3>Consulta Especializada</h3>
+    <p>Atención integral infantil.</p>
+  </div>
+  <div class="info-card">
+    <span class="icon">🥦</span>
+    <h3>Alimentación</h3>
+    <p>Nutrición segura y consciente.</p>
+  </div>
+  <div class="info-card">
+    <span class="icon">🏠</span>
+    <h3>Domicilios</h3>
+    <p>Atención pediátrica en casa.</p>
+  </div>
 </section>
-
-<a href="https://wa.me/573014142741" class="whatsapp-float" target="_blank">📲</a>
 
 <section class="agenda-calendar">
   <h2>Agenda Disponible</h2>
 
+  <!-- REEMPLAZAR src con ID REAL del calendario -->
   <iframe 
-    src="https://calendar.google.com/calendar/embed?src=TU_ID_DE_CALENDARIO&ctz=America/Bogota"
-    style="border:0"
+    src="https://calendar.google.com/calendar/embed?src=TU_ID_REAL@group.calendar.google.com&ctz=America/Bogota"
     width="100%"
     height="600"
     frameborder="0"
@@ -55,17 +65,22 @@
   </iframe>
 
   <a class="btn-primary"
-     href="https://calendar.google.com/calendar/u/0/r/eventedit?dates="
+     href="https://calendar.google.com/calendar/u/0/r/eventedit"
      target="_blank">
      Solicitar cita
   </a>
 </section>
 
-  
-<footer>
-  © 2026 Dra. Lhizz Cuellar
+<a href="https://wa.me/573014142741" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  📲
+</a>
+
+<footer class="footer">
+  <p>© 2026 Dra. Lhizz Cuellar</p>
+  <p>Salud infantil con evidencia y amor</p>
 </footer>
 
+<!-- JS SOLO AQUÍ -->
 <script src="assets/js/main.js"></script>
 </body>
 </html>
