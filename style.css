@@ -1,0 +1,62 @@
+:root {
+  --blue: #0077b6;
+  --dark: #023e8a;
+  --orange: #ff6b35;
+  --aqua: #90e0ef;
+}
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#caf0f8, #fff);
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background: white;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  gap: 20px;
+  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
