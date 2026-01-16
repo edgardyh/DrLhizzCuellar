@@ -1,319 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Lhizz Cuellar - Pediatría Océano</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --ocean-blue: #0077b6;
-            --deep-blue: #023e8a;
-            --sand: #fefae0;
-            --nemo-orange: #ff6b35;
-            --dory-blue: #00b4d8;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Lhizz Cuellar | Pediatría</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Quicksand', sans-serif;
-        }
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
-        body {
-            background: linear-gradient(180deg, #caf0f8 0%, #90e0ef 30%, #48cae4 60%, #00b4d8 100%);
-            color: #03045e;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
+<style>
+:root {
+  --sky: #caf0f8;
+  --aqua: #90e0ef;
+  --blue: #00b4d8;
+  --deep: #0077b6;
+  --coral: #ff6b35;
+}
 
-        h1, h2, h3 {
-            font-family: 'Fredoka One', cursive;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
 
-        /* --- ANIMACIONES DE PECES --- */
-        @keyframes swim {
-            from { transform: translateX(-200px) rotateY(0deg); }
-            to { transform: translateX(calc(100vw + 200px)) rotateY(0deg); }
-        }
+body {
+  background: linear-gradient(180deg, var(--sky), #fff);
+  color: #023047;
+  overflow-x: hidden;
+}
 
-        .clownfish, .blue-tang {
-            position: fixed;
-            z-index: 1;
-            animation: swim 20s linear infinite;
-        }
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        /* Estilo Nemo */
-        .clownfish-body {
-            width: 80px; height: 50px;
-            background: var(--nemo-orange);
-            border-radius: 50% 60% 60% 50%;
-            position: relative;
-            border: 2px solid #000;
-        }
-        .stripe {
-            position: absolute;
-            width: 15px; height: 100%;
-            background: white;
-            border-left: 2px solid #000;
-            border-right: 2px solid #000;
-        }
-        .stripe1 { left: 20px; }
-        .stripe2 { left: 50px; }
-        .fish-eye {
-            position: absolute;
-            top: 15px; right: 10px;
-            width: 8px; height: 8px;
-            background: black;
-            border-radius: 50%;
-        }
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        /* Estilo Dory */
-        .blue-tang-body {
-            width: 90px; height: 60px;
-            background: #0056b3;
-            border-radius: 40% 70% 70% 40%;
-            position: relative;
-            border: 2px solid #000;
-        }
+.logo h1 {
+  font-family: 'Fredoka One';
+  font-size: 1.6rem;
+  color: var(--deep);
+}
 
-        /* --- BURBUJAS --- */
-        @keyframes rise {
-            0% { transform: translateY(100vh) scale(1); opacity: 0; }
-            50% { opacity: 0.6; }
-            100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
-        }
-        .bubble {
-            position: fixed;
-            bottom: -50px;
-            background: rgba(255, 255, 255, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            border-radius: 50%;
-            animation: rise 10s infinite ease-in;
-            z-index: 0;
-        }
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--deep);
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
 
-        /* --- AMBIENTE FONDO --- */
-        .seaweed { position: fixed; bottom: 0; z-index: 2; }
-        .seaweed-blade {
-            width: 20px; height: 200px;
-            background: #2d6a4f;
-            border-radius: 50% 50% 0 0;
-            animation: sway 3s ease-in-out infinite alternate;
-            transform-origin: bottom;
-        }
-        @keyframes sway {
-            from { transform: rotate(-5deg); }
-            to { transform: rotate(5deg); }
-        }
+.menu a:hover {
+  background: var(--aqua);
+  color: #000;
+}
 
-        /* --- ESTRUCTURA WEB --- */
-        .header {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-links { display: flex; list-style: none; gap: 20px; }
-        .nav-links a { text-decoration: none; color: var(--deep-blue); font-weight: bold; }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px;
-            transition: transform 0.3s;
-        }
-        .btn-primary { background: var(--nemo-orange); color: white; }
-        .btn-secondary { background: var(--dory-blue); color: white; }
-        .btn:hover { transform: scale(1.1); }
+.hero h2 {
+  font-family: 'Fredoka One';
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; position: relative; z-index: 10; }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .service-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .service-icon { font-size: 50px; display: block; margin-bottom: 15px; }
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+}
 
-        .schedule-table {
-            width: 100%;
-            background: white;
-            border-collapse: collapse;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-        .schedule-table th, .schedule-table td {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            text-align: center;
-        }
-        .schedule-table th { background: var(--ocean-blue); color: white; }
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 35px;
+  border-radius: 40px;
+  background: var(--coral);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-        .footer {
-            background: var(--deep-blue);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            margin-top: 50px;
-        }
+.btn:hover {
+  transform: scale(1.08);
+}
 
-        .section { padding: 60px 0; }
-        .section-subtitle { font-size: 1.2rem; margin-bottom: 30px; text-align: center; color: #004a6b; }
-        h2 { text-align: center; font-size: 2.5rem; color: #003049; }
+/* PECES */
+@keyframes swim {
+  from { transform: translateX(-200px); }
+  to { transform: translateX(110vw); }
+}
 
-        .testimonial-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border-left: 5px solid var(--nemo-orange);
-        }
+.fish {
+  position: fixed;
+  z-index: 1;
+  animation: swim linear infinite;
+  opacity: 0.9;
+}
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-    </style>
+.fish.nemo { top: 25%; font-size: 50px; animation-duration: 18s; }
+.fish.dory { top: 45%; font-size: 45px; animation-duration: 25s; }
+.fish.turtle { top: 65%; font-size: 55px; animation-duration: 30s; }
+
+/* SECCIONES */
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h3 {
+  font-family: 'Fredoka One';
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card span {
+  font-size: 45px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--deep);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+</style>
 </head>
+
 <body>
 
-<div class="bubble" style="width: 50px; height: 50px; left: 8%; animation-delay: 0s;"></div>
-<div class="bubble" style="width: 35px; height: 35px; left: 18%; animation-delay: 2s;"></div>
-<div class="bubble" style="width: 60px; height: 60px; left: 28%; animation-delay: 4s;"></div>
+<!-- PECES -->
+<div class="fish nemo">🐠</div>
+<div class="fish dory">🐟</div>
+<div class="fish turtle">🐢</div>
 
-<div class="clownfish" style="top: 15%; animation-delay: 0s;">
-    <div class="clownfish-body">
-        <div class="stripe stripe1"></div>
-        <div class="stripe stripe2"></div>
-        <div class="fish-eye"></div>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <h1>🌊 Dra. Lhizz Cuellar</h1>
     </div>
-</div>
-
-<div class="blue-tang" style="top: 40%; animation-delay: 5s; animation-duration: 25s;">
-    <div class="blue-tang-body">
-        <div class="fish-eye"></div>
-    </div>
-</div>
-
-<div class="seaweed" style="left: 5%;"><div class="seaweed-blade"></div></div>
-<div class="seaweed" style="right: 5%;"><div class="seaweed-blade" style="height: 250px; animation-delay: 1s;"></div></div>
-
-<header class="header">
-    <div class="nav-container">
-        <div class="logo">
-            <h1>🌊 Dra. Lhizz Cuellar</h1>
-            <p style="font-size: 0.8rem; color: var(--ocean-blue);">Buscando la Mejor Salud para tus Pequeños</p>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#doctor">Doctora</a></li>
-                <li><a href="#horarios">Horarios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-    <section class="hero">
-        <h2>🌊 "Sigue Nadando, Sigue Creciendo" 🐠</h2>
-        <p class="section-subtitle">Donde cada niño es una aventura única en el gran océano azul</p>
-        <div class="cta-buttons">
-            <a href="#contacto" class="btn btn-primary">Agendar Mi Cita</a>
-            <a href="#servicios" class="btn btn-secondary">Explorar Servicios</a>
-        </div>
-    </section>
+<section class="hero">
+  <h2>Cuidando Sonrisas, Acompañando Sueños</h2>
+  <p>Pediatría basada en evidencia científica, calidez humana y amor por cada pequeño explorador.</p>
+  <a href="agenda.html" class="btn">Agendar Cita</a>
+</section>
 
-    <section id="servicios" class="section">
-        <h2>🐠 Nuestros Servicios del Arrecife</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="service-icon">👶</span>
-                <h3>Control Explorador</h3>
-                <p>Seguimiento del desarrollo de tu bebé desde el nacimiento.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">💉</span>
-                <h3>Escudo Anémona</h3>
-                <p>Vacunación completa. Protección total como la anémona a Nemo.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🚨</span>
-                <h3>Rescate de Emergencia</h3>
-                <p>Atención inmediata para enfermedades agudas. Rápido y eficaz.</p>
-            </div>
-        </div>
-    </section>
+<section class="section">
+  <h3>Servicios Pediátricos</h3>
+  <div class="cards">
+    <div class="card">
+      <span>👶</span>
+      <h4>Control del Niño Sano</h4>
+      <p>Seguimiento integral del desarrollo infantil.</p>
+    </div>
+    <div class="card">
+      <span>💉</span>
+      <h4>Vacunación</h4>
+      <p>Protección segura y responsable.</p>
+    </div>
+    <div class="card">
+      <span>🚑</span>
+      <h4>Urgencias</h4>
+      <p>Atención rápida y confiable.</p>
+    </div>
+  </div>
+</section>
 
-    <section id="horarios" class="section">
-        <h2>⏰ Horarios del Consultorio</h2>
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Día</th>
-                    <th>Mañana</th>
-                    <th>Tarde</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Lunes - Viernes</td><td>9:00 AM - 1:00 PM</td><td>3:00 PM - 7:00 PM</td></tr>
-                <tr><td>Sábado</td><td>9:00 AM - 2:00 PM</td><td>Descanso</td></tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section id="contacto" class="section">
-        <h2>📍 Contáctanos</h2>
-        <div class="contact-info">
-            <div class="service-card">
-                <span>📱</span>
-                <h3>WhatsApp</h3>
-                <p>+52 55 1234 5678</p>
-            </div>
-            <div class="service-card">
-                <span>📧</span>
-                <h3>Email</h3>
-                <p>citas@dralhizz.com</p>
-            </div>
-        </div>
-    </section>
-</div>
-
-<footer class="footer">
-    <p style="font-size: 1.5rem;">"Cuando la vida te tumbe..."</p>
-    <p style="font-size: 2rem; color: #ffd60a;">¡SIGUE NADANDO!</p>
-    <p>© 2025 Dra. Lhizz Cuellar. Temática inspirada en Nemo.</p>
+<footer>
+  <p>© 2025 Dra. Lhizz Cuellar · Pediatría con amor</p>
 </footer>
 
 </body>
