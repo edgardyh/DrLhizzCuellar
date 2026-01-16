@@ -1,161 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Lhizz Cuellar - Pediatra Certificada</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --ocean-blue: #0077b6;
-            --deep-blue: #023e8a;
-            --nemo-orange: #ff6b35;
-            --soft-aqua: #90e0ef;
-            --white: #ffffff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Lhizz Cuellar | Pediatra Certificada</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Quicksand', sans-serif; }
-        
-        body { 
-            background: linear-gradient(180deg, #caf0f8 0%, #ffffff 100%); 
-            color: #03045e; 
-            overflow-x: hidden; 
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
-        /* Animaciones de Peces */
-        @keyframes swim { 
-            from { transform: translateX(-200px) rotateY(0deg); } 
-            to { transform: translateX(calc(100vw + 200px)) rotateY(0deg); } 
-        }
-        .fish { position: fixed; z-index: 1; animation: swim 25s linear infinite; opacity: 0.6; pointer-events: none; }
-
-        /* Header y Logo HD */
-        header { 
-            background: var(--white); 
-            padding: 30px 20px; 
-            text-align: center; 
-            border-bottom: 5px solid var(--soft-aqua);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .logo-hd {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--soft-aqua);
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; position: relative; z-index: 5; }
-
-        /* Tarjetas de Información (Estilo Instagram) */
-        .info-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .info-card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            border: 1px solid #e1f5fe;
-        }
-
-        .info-card i { font-size: 40px; display: block; margin-bottom: 10px; }
-
-        /* Formulario */
-        .contact-form {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            border: 2px solid var(--soft-aqua);
-            margin-top: 30px;
-        }
-
-        .form-group { margin-bottom: 15px; }
-        
-        label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--deep-blue); }
-
-        input, textarea {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
-            border: 2px solid #eee;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        input:focus, textarea:focus { border-color: var(--nemo-orange); outline: none; }
-
-        .submit-btn {
-            background: var(--nemo-orange);
-            color: white;
-            border: none;
-            padding: 18px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            width: 100%;
-            font-size: 18px;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-
-        .submit-btn:hover { transform: translateY(-3px); background: #e85a2a; }
-
-        /* Botón WhatsApp Flotante */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        footer {
-            background: var(--deep-blue);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 60px;
-        }
-    </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
 
-<div class="fish" style="top: 15%; font-size: 40px;">🐠</div>
-<div class="fish" style="top: 45%; animation-duration: 30s; font-size: 50px;">🐟</div>
-<div class="fish" style="top: 75%; animation-duration: 20s; font-size: 35px;">🐡</div>
+<header class="header">
+  <img src="assets/img/logo.png" class="logo" alt="Logo Dra Lhizz">
+  <h1>Dra. Lhizz Cuellar</h1>
+  <p>Pediatra Certificada | Salud Infantil con Amor</p>
 
-<header>
-    <img src="https://instagram.fbaq2-2.fna.fbcdn.net/v/t51.2885-19/462191599_1253013892716170_5836884025091702829_n.jpg?_nc_ht=instagram.fbaq2-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=Y_yK8P2kYf4Q7kNvgE9_U_g&_nc_gid=3f5e9c0c8b6d4e5a9a8f6d7c4b3a2b1c&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYB_9_z_x_P_k_z_P_k_z_P_k_z_P_k_z_P_k_z_P_k_z_Q&oe=66EBBA7F&_nc_sid=7a9f4b" 
-         alt="Dra. Lhizz Cuellar Logo" class="logo-hd">
-    
-    <h1 style="font-family: 'Fredoka One'; color: var(--deep-blue); font-size: 2.2rem;">Dra. Lhizz Cuellar</h1>
-    <p style="font-weight: 700; color: var(--ocean-blue);">Pediatra & Puericultora Certificada</p>
-    <p style="font-size: 0.9rem; margin-top: 5px;">📍 Barranquilla, Colombia</p>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 </header>
 
-<div class="container">
-    
-    <div class="info-section">
-        <div class="info-card">
-            <i>👶</i>
-            <h3>Control de Crecimiento</h3>
-            <p>Seguimiento integral del
+<section class="hero">
+  <h2>Tu Pediatra de Confianza</h2>
+  <p>Acompañando el crecimiento de tus pequeños con evidencia científica y calidez humana.</p>
+</section>
+
+<section class="info-grid">
+  <div class="info-card">🩺<h3>Consulta Especializada</h3><p>Atención integral infantil.</p></div>
+  <div class="info-card">🥦<h3>Alimentación</h3><p>Nutrición segura y consciente.</p></div>
+  <div class="info-card">🏠<h3>Domicilios</h3><p>Atención pediátrica en casa.</p></div>
+</section>
+
+<a href="https://wa.me/573014142741" class="whatsapp-float" target="_blank">📲</a>
+
+<footer>
+  © 2026 Dra. Lhizz Cuellar
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
